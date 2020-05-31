@@ -12,7 +12,7 @@ async function getGeoCode(address) {
     );
 
     const data = response.data;
-
+    console.log(data)
     if (!data || data.status === 'ZERO_RESULTS') {
         const error = new HttpError(
             'Could not find location for the specified address.',
