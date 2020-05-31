@@ -1,9 +1,9 @@
-##CovidZone API
+## CovidZone API
 
 CovidZone API provides data to check if you are in a containment zone or not. The api also provides data of states and district wise zone (Red, Orange, Green) data.
 
 
-####API ENDPOINTS
+#### API ENDPOINTS
 
 * `https://covid-zones-api.herokuapp.com/zones/:sateCode`
 
