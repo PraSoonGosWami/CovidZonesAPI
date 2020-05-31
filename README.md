@@ -27,11 +27,11 @@ CovidZone API provides data to check if you are in a containment zone or not. Th
 https://api.covid19india.org/
 https://geoiq.io/covid19.html
 
-####Google maps API
+#### Google maps API <br>
 https://cloud.google.com/maps-platform <br>
 Geo-coding and reverse geo-coding with google maps API
 
-####Author's portfolio
+#### Author's portfolio <br>
 Prasoon Goswami <br>
 https://prasoon.me
     
