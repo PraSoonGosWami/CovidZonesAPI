@@ -1,0 +1,23 @@
+{
+  "name": "covid-zones-api",
+  "version": "1.0.0",
+  "description": "Covid-19 API, Get zone related data, total active recovered cases, also alerts containment zones (if available) around 5Km radius",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Prasoon Goswami",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.5.0"
+  }
+}
