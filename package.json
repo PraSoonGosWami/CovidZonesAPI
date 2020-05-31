@@ -4,6 +4,7 @@
   "description": "Covid-19 API, Get zone related data, total active recovered cases, also alerts containment zones (if available) around 5Km radius",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js"
   },
@@ -17,7 +18,6 @@
   "dependencies": {
     "axios": "^0.19.2",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "express-validator": "^6.5.0"
+    "express": "^4.17.1"
   }
 }
