@@ -19,7 +19,7 @@ CovidZone API provides data to check if you are in a containment zone or not. Th
   `https://covid-zones-api.herokuapp.com/search/loction` `body = {query: "Park street Kolkata"}`
   returns geocode [lat,lng] for the matched place
   
-* `https://covid-zones-api.herokuapp.com/check/containment/` `body = {location : [lat,lng]}'
+* `https://covid-zones-api.herokuapp.com/check/containment/` `body = {location : [lat,lng]}`
    returns if the provided coordinates lie in containment zone also return list of containment places within 5Km radius if available
    
 
