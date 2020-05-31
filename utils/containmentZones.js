@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const HttpError = require('../model/http-error');
-
+const reverseGeoCode = require('./reverseGeoCoding')
 const API_KEY = process.env.GEOIQ_API_KEY
 
 async function containmentZones(geoCode) {
@@ -19,9 +19,7 @@ async function containmentZones(geoCode) {
         );
         throw error;
     }
-    if (!res.data[0].containmentsAvailability) {
-        throw new HttpError('Containment zone data not available for your location', 422)
-    }
+
 
     const nearbyZones = await axios.post(
         'https://data.geoiq.io/dataapis/v1.0/covid/nearbyzones',
@@ -36,9 +34,13 @@ async function containmentZones(geoCode) {
         throw new HttpError("Cannot get near by zones",422)
     }
     const nearbyData = nearbyZones.data.containmentZoneNames
-
-    return {containment:res.data,nearby:nearbyData}
-
+    let getAddress
+    try {
+        getAddress = await reverseGeoCode(geoCode)
+    }catch (e) {
+        throw e
+    }
+    return {containment:res.data,nearby:nearbyData,address:getAddress}
 
 }
 

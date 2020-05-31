@@ -4,11 +4,11 @@ const HttpError = require('../model/http-error');
 
 const API_KEY = process.env.MAPS_API_KEY
 
-async function getGeoCode(address) {
+async function reverseGeoCode(coordinates) {
 
 
     const response = await axios.get(
-        `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${API_KEY}`
+        `https://maps.googleapis.com/maps/api/geocode/json?latlng=${coordinates[0]},${coordinates[1]}&key=${API_KEY}`
     );
 
     const data = response.data;
@@ -19,13 +19,11 @@ async function getGeoCode(address) {
         );
         throw error;
     }
-    let res = []
-    data.results.map(result =>{
-        res.push({address: result.formatted_address,geo:result.geometry.location})
-    })
+    const res = data.results[0].formatted_address
+
 
     return res;
 }
 
-module.exports = getGeoCode;
+module.exports = reverseGeoCode;
 
