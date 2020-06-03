@@ -12,10 +12,10 @@ router.get('/zones/:stateCode/',controller.getZonesByState)
 
 //@get  @path /search/location/
 //expects "query" in body
-router.get('/search/location/',controller.searchLocation)
+router.post('/search/location/',controller.searchLocation)
 
 //@get  @path /check/containment/
 //expects "location" in body
-router.get('/check/containment/',controller.checkContainmentZone)
+router.post('/check/containment/',controller.checkContainmentZone)
 
 module.exports = router
