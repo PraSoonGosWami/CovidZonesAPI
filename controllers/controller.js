@@ -10,6 +10,7 @@ const containmentZones = require('../utils/containmentZones')
 //gets state wise data of current stats
 // active | recovered | total | death | last update time | State notes
 const getStatsByState = async (req, res, next) =>{
+    console.log(req)
     const stateCode = req.params.stateCode;
     if(!stateCode){
         return next(new HttpError("No state code passed",400))

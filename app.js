@@ -7,7 +7,12 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 //adding headers to access API from other hosts
-app.use(cors())
+const whitelist = ['https://covidzones.prasoon.me', 'https://covid-zones.web.app']
+const corsOptions = {
+    origin: 'https://covidzones.prasoon.me',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+app.use(cors(corsOptions))
 app.use(express.json({extended: false}))
 
 app.use('/',route)
