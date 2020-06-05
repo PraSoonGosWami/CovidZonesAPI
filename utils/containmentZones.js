@@ -40,7 +40,7 @@ async function containmentZones(geoCode) {
     }catch (e) {
         throw e
     }
-    return {containment:res.data,nearby:nearbyData,address:getAddress}
+    return {containment:res.data,nearby:nearbyData,address:getAddress, lastUpdated:new Date()}
 
 }
 
