@@ -2,6 +2,10 @@
 
 CovidZone API provides data to check if you are in a containment zone or not. The api also provides data of states and district wise zone (Red, Orange, Green) data.
 
+**You cannot use these API end points in your apps or websites**
+**The API is protected with cors policies and can only be called from the hoisted website https://covidzones.prasoon.me**
+**This repository is only meant to be used for learning or refference purposes**
+**If you want to use these APIs in your own websites or apps contact me at support@prasoon.me**
 
 #### API ENDPOINTS
 
