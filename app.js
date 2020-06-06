@@ -6,7 +6,7 @@ const app = express()
 
 const PORT = process.env.PORT || 5000
 
-//adding headers to access API from other hosts
+//CORS policy protection
 const whitelist = ['https://covidzones.prasoon.me', 'https://covid-zones.web.app']
 const corsOptions = {
     origin: whitelist,
