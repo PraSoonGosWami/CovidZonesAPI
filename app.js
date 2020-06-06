@@ -7,7 +7,7 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 //adding headers to access API from other hosts
-const whitelist = ['https://covidzones.prasoon.me', 'https://covid-zones.web.app','http://localhost:3000']
+const whitelist = ['https://covidzones.prasoon.me', 'https://covid-zones.web.app']
 const corsOptions = {
     origin: whitelist,
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
